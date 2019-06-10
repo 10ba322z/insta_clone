@@ -2,8 +2,9 @@ require 'test_helper'
 
 class PagesControllerTest < ActionDispatch::IntegrationTest
   test "should get index" do
-    get pages_index_url
+    get root_path
     assert_response :success
+    assert_select "title", "Home | Insta_clone"
   end
 
   test "should get show" do
