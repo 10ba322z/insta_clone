@@ -16,8 +16,11 @@ gem 'bootsnap', '>= 1.1.0', require: false
 # 追加gemfiles
 gem 'devise'
 gem 'omniauth-facebook'
+gem 'faker'
 gem 'bootstrap-sass'
 gem 'jquery-rails'
+gem 'will_paginate'
+gem 'bootstrap-will_paginate'
 
 group :development, :test do
   gem 'byebug', platforms: [:mri, :mingw, :x64_mingw]
