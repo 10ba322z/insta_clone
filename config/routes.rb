@@ -12,6 +12,6 @@ Rails.application.routes.draw do
     get 'password_edit', to: 'users/registrations#password_edit'
     patch 'password_update', to: 'users/registrations#password_update'
   end
-  resources :users, :only => [:index, :show,]
-
+  resources :users,      only: [:index, :show]
+  resources :microposts, only: [:create, :destroy]
 end
