@@ -1,4 +1,5 @@
 class User < ApplicationRecord
+  attr_accessor :current_password
   before_save { self.email = email.downcase }
   # Include default devise modules. Others available are:
   # :confirmable, :lockable, :timeoutable, :trackable and :omniauthable
