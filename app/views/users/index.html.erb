@@ -1,10 +1,19 @@
-<% provide(:title, 'All users') %>
-<h1>All users</h1>
+</br>
+</br>
+</br>
+<% provide(:title, '') %>
 
-<ul class="users">
-  <% @users.each do |user| %>
-    <li>
-      <%= link_to user.username, user %>
-    </li>
-  <% end %>
-</ul>
+<div class="row">
+  <aside class="col-md-4">
+    <section class="user_info">
+      <%= render 'layouts/user_info' %>
+    </section>
+    <section class="micropost_form">
+      <%= render 'layouts/micropost_form' %>
+    </section>
+  </aside>
+  <div class="col-md-8">
+    <h3>Micropost Feed</h3>
+    <%= render 'layouts/feed' %>
+  </div>
+</div>
