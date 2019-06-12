@@ -1,5 +1,6 @@
 class UsersController < ApplicationController
   before_action :authenticate_user!, only: [:following, :followers]
+
   def index
     if user_signed_in?
       @user = current_user
