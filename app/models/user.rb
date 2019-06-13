@@ -8,7 +8,7 @@ class User < ApplicationRecord
                                    dependent:   :destroy
   has_many :following, through: :active_relationships,  source: :followed
   has_many :followers, through: :passive_relationships, source: :follower
-  mount_uploader :image_name, PictureUploader
+  mount_uploader :image_name, ImageNameUploader
   attr_accessor :current_password
   before_save { self.email = email.downcase }
   # Include default devise modules. Others available are:
