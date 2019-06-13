@@ -9,6 +9,11 @@
 }
 
 /* universal */
+// top-pageの背景用
+// .test {
+//   background: image-url('background.jpg');
+//   background-size: cover;
+// }
 
 body {
   padding-top: 60px;
@@ -105,16 +110,17 @@ aside {
       padding-top: 0;
     }
     span {
+      text-align: center;
       display: block;
       margin-bottom: 3px;
       line-height: 1;
     }
     h1 {
-      font-size: 1.4em;
-      text-align: left;
+      font-size: 2em;
+      text-align: center;
       letter-spacing: -1px;
       margin-bottom: 3px;
-      margin-top: 0px;
+      margin-top: 10px;
     }
   }
 }
@@ -124,8 +130,9 @@ aside {
   overflow: auto;
   margin-top: 0;
   padding: 0;
+  display: flex;
+   justify-content: center;
   a {
-    float: left;
     padding: 0 10px;
     border-left: 1px solid $gray-lighter;
     color: gray;
