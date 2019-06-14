@@ -10,7 +10,7 @@
     <%= render 'layouts/shim' %>
   </head>
 
-  <body>
+  <body class=<%="bgimage" unless user_signed_in? %>>
     <%= render 'layouts/header' if user_signed_in? %>
     <%= yield %>
     <%= render 'layouts/footer' if user_signed_in? %>
