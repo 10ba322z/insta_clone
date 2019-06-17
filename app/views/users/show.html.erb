@@ -1,0 +1,27 @@
+<% provide(:title, @user.username) %>
+
+<div class="row">
+  <aside class="col-md-4">
+    <section class="user_info">
+      <%= render 'layouts/user_info' %>
+    </section>
+    <section class="stats">
+      <%= render 'layouts/stats' %>
+    </section>
+    <section class="micropost_form">
+      <%= render 'layouts/micropost_form' %>
+    </section>
+  </aside>
+  <aside class="col-md-4">
+  </aside>
+  <div class="col-md-8">
+    <%= render 'follow_form' if user_signed_in? %>
+    <% if @user.microposts.any? %>
+      <h3>Photos (<%= @user.microposts.count %>)</h3>
+      <ol class="microposts">
+        <%= render @microposts %>
+      </ol>
+      <%= will_paginate @microposts %>
+    <% end %>
+  </div>
+</div>

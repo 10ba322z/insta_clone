@@ -1,0 +1,6 @@
+<div class="text-center">
+  <%= image_tag @user.image_name.url if @user.image_name? %>
+</div>
+<h1><%= link_to @user.username , edit_user_registration_path %></h1>
+<span><%= pluralize(@user.microposts.count, "photo") %></span>
+<span><%= @user.profile %></span>
